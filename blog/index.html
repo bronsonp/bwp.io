@@ -1,0 +1,13 @@
+---
+layout: page
+title: Blog posts
+permalink: /blog/
+description: "An archive of posts."
+---
+
+<ul class="list-unstyled">
+{% for post in site.categories.blog limit:items_to_show %}
+<li><span class="post-date">{{ post.date | date_to_string }} » </span><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+<li><a href="/feed.xml"><img src="/assets/images/feed-icon-14x14.png" /> Subscribe to feed</a></li>
+</ul>

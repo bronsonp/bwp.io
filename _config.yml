@@ -1,0 +1,58 @@
+title:            Bronson Philippa
+description:      Science, programming, and technology
+disqus_shortname:
+#Your site's domain goes here. Leave localhost server or blank when working locally.
+url:
+
+# Owner/author information
+owner:
+  name:           Bronson Philippa
+  bio:            "Physics researcher and scientific programmer."
+  email:          bronson.philippa@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:
+  facebook:
+  github:         https://github.com/bronsonp
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:   https://plus.google.com/+BronsonPhilippa
+
+# Analytics and webmaster tools stuff goes here
+google_analytics: UA-45951032-1
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    Australia/Brisbane
+future:      true
+pygments:    true
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:            /:categories/:year/:title/
+relative_permalinks:  false
+
+# Amount of post to show on home page
+#paginate: 5
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess", "_pages"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Procfile", "README.md", "vendor", "config.ru"]
