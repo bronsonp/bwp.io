@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Online LaTeX equation rendering"
-link: /latex-math/
+link: http://bwp.io/latex-math/
 description: "How I made my online LaTeX equation renderer"
 ---
 
-I have created a webpage that renders LaTeX equations. In an online chat session, one may want to send an equation, but typical instant message software can't render LaTeX. A simple workaround is to provide a link to a webpage where the equation is visible. You can test out this software [here](/latex-math/).
+I have created a webpage that renders LaTeX equations. In an online chat session, one may want to send an equation, but typical instant message software can't render LaTeX. A simple workaround is to provide a link to a webpage where the equation is visible. You can test out this software [here]({{ site.url }}/latex-math/).
 
 This software is completely client-side. The server does not store the text being rendered, in fact, the server does not even *see* the text being rendered. The excellent [MathJax](http://www.mathjax.org/) library is used to create beautiful typography.
 

@@ -23,4 +23,4 @@ title: Software that I've written
 * Completely client-side (JavaScript) implementation.
 * The LaTeX equation is [compressed](http://pieroxy.net/blog/pages/lz-string/index.html), then encoded in `base64`, and then stored in the URL. The server does not store the equations.
 * Uses MathJax rendering for beautiful typography.
-* [Hosted online on this website.](/latex-math/)
+* [Hosted online on this website.]({{ site.url }}/latex-math/)
