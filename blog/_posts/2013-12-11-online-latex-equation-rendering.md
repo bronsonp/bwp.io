@@ -14,4 +14,4 @@ This was inspired by [P. Lutus' Interactive LaTeX editor](http://arachnoid.com/l
 * Rather than embedding the equation in a HTTP `GET` request, I used the URL hash parameter (that is, the text after the `#` in a URL). The problem with HTTP `GET` requests is that they are length-limited, so you can't simply paste in multiple pages of text with embedded equations. The URL hash is not sent to the server and thereby this length limit is avoided.
 * To further assist with rendering large blocks of LaTeX, I used a [JavaScript compression library](http://pieroxy.net/blog/pages/lz-string/index.html) to first compress the text before base64 encoding it. This results is shorter URLs than would otherwise be achieved.
 
-The JavaScript code to implement the LaTeX rendering is visible in [this website's GitHub page](https://raw.github.com/bronsonp/bronson.philippa.fm/master/_pages/latex-math.md).
+The JavaScript code to implement the LaTeX rendering is visible in [this website's GitHub page](https://raw.github.com/bronsonp/bronsonp.github.io/master/_pages/latex-math.md).
