@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Bronson Philippa">
-    <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="{{ site.url }}/feed.atom">
+    <link rel="alternate" type="application/atom+xml" title="New posts" href="{{ site.url }}/feed.atom">
 
     <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700" rel="stylesheet" type="text/css">
-    <link href="/assets/css/bwp.css" rel="stylesheet">
+    <link href="/assets/style.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -22,7 +21,7 @@
     {% if page.use_mathjax %}
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     {% endif %}
-{{ if page.extra_header_html }}
+{{ page.extra_header_html }}
   </head>
 
   <body>

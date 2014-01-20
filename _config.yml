@@ -3,6 +3,7 @@ description:      Science, programming, and technology
 disqus_shortname:
 #Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              http://bwp.io
+production:       true
 
 # Owner/author information
 owner:
@@ -20,12 +21,6 @@ owner:
   tumblr:
   # For Google Authorship https://plus.google.com/authorship
   google_plus:   https://plus.google.com/+BronsonPhilippa
-
-# Analytics and webmaster tools stuff goes here
-google_analytics: true
-google_verify:
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Australia/Brisbane
@@ -54,5 +49,5 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
-include: [".htaccess", "_pages"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Procfile", "README.md", "vendor", "config.ru"]
+include: ["_pages"]
+exclude: ["src", "Rakefile", "README.md", "drafts", "publications"]
