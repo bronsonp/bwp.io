@@ -50,4 +50,4 @@ kramdown:
     coderay_css: class
 
 include: ["_pages"]
-exclude: ["src", "Rakefile", "README.md", "drafts", "publications"]
+exclude: ["src", "Rakefile", "README.md", "s3_website.yml", "drafts", "publications"]

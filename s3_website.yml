@@ -1,0 +1,9 @@
+s3_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+s3_secret: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+s3_bucket: bwp.io
+max_age:
+  "assets/*": 86400
+  "*": 300
+gzip: true
+s3_reduced_redundancy: true
+s3_endpoint: ap-southeast-2

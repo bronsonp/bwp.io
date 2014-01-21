@@ -1,1 +1,4 @@
 _site
+.env
+_assets.yml
+assets/style-*.css
