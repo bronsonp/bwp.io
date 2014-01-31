@@ -24,6 +24,10 @@ a:hover {
   }
 }
 
+h1 {
+  padding-top: 15px;
+}
+
 h1,
 h2,
 h3,
@@ -55,6 +59,10 @@ h6,
 
 .blog-footer a {
   color: #7d756e;
+}
+
+.dateline {
+  color: #787878;
 }
 
 .navbar {
