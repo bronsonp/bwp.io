@@ -2,65 +2,67 @@
 layout: front-page
 ---
 
-<div class="row">
-  <div class="col-md-4">
-    <h1>Hello!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Hello!</h1>
 
-    {% comment %}
-    <p><img src="http://placehold.it/300x300" class="img-responsive" alt="Bronson Philippa profile picture" /></p>
-    {% endcomment %}
-    <p>I'm Bronson Philippa. I'm a physics researcher and scientific programmer.</p>
-    <ul class="list-unstyled">
-      <li><a href="/about"> » About me</a></li>
-      <li><a href="/software"> » Software I've written</a></li>
-      <li><a href="/feed.atom"><img src="/assets/images/feed-icon-14x14.png" alt="RSS icon" /> Subscribe to feed</a></li>
-    </ul>
-  </div>
-  <div class="col-md-8 content-list">
+      {% comment %}
+      <p><img src="http://placehold.it/300x300" class="img-responsive" alt="Bronson Philippa profile picture" /></p>
+      {% endcomment %}
+      <p>I'm Bronson Philippa. I'm a physics researcher and scientific programmer.</p>
+      <ul class="list-unstyled">
+        <li><a href="/about"> » About me</a></li>
+        <li><a href="/software"> » Software I've written</a></li>
+        <li><a href="/feed.atom"><img src="/assets/images/feed-icon-14x14.png" alt="RSS icon" /> Subscribe to feed</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8 content-list">
 
-{% unless site.production %}
+      {% unless site.production %}
 
-<h2>Drafts:</h2>
-<ul class="list-unstyled">
-{% for post in site.pages %}
-{% assign folder = post.path | split: '/' | first %}
-{% if folder == 'drafts' %}
-<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
-{% endunless %}
+      <h2>Drafts:</h2>
+      <ul class="list-unstyled">
+        {% for post in site.pages %}
+        {% assign folder = post.path | split: '/' | first %}
+        {% if folder == 'drafts' %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+      {% endunless %}
 
-{% assign items_to_show = 5 %}
-<h2>Recent blog posts:</h2>
-<ul class="list-unstyled">
-{% for post in site.categories.blog limit:items_to_show %}
-<li><span class="post-date">{{ post.date | date_to_string }} » </span><a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
-{% assign posts_not_shown = site.categories.blog | size | minus: items_to_show %}
-{% if posts_not_shown > 0 %}
-<p><a href="/blog/">Plus {{ posts_not_shown }} older post{% if posts_not_shown > 1 %}s{% endif %}</a></p>
-{% endif %}
+      {% assign items_to_show = 5 %}
+      <h2>Recent blog posts:</h2>
+      <ul class="list-unstyled">
+        {% for post in site.categories.blog limit:items_to_show %}
+        <li><span class="post-date">{{ post.date | date_to_string }} » </span><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% assign posts_not_shown = site.categories.blog | size | minus: items_to_show %}
+      {% if posts_not_shown > 0 %}
+      <p><a href="/blog/">Plus {{ posts_not_shown }} older post{% if posts_not_shown > 1 %}s{% endif %}</a></p>
+      {% endif %}
 
-{% comment %}
-<h2>Recent scientific publications:</h2>
-<p>The links below are non-technical summaries of my recent peer-reviewed publications.</p>
-<ul class="list-unstyled">
-{% for post in site.categories.publications limit:items_to_show %}
-<li>{{ post.authors | array_to_sentence_string }}. <a href="{{ post.url }}">{{ post.title }}</a>. <em>{{ post.journal }}</em>, <a href="http://dx.doi.org/{{ post.doi }}">doi:{{ post.doi }}</a> ({{ post.date | date: "%Y" }}).</li>
-{% endfor %}
-</ul>
-{% assign posts_not_shown = site.categories.publications | size | minus: items_to_show %}
-{% if posts_not_shown > 0 %}
-<p><a href="/publications/">Plus {{ posts_not_shown }} older publication{% if posts_not_shown > 1 %}s{% endif %}</a></p>
-{% endif %}
+      {% comment %}
+      <h2>Recent scientific publications:</h2>
+      <p>The links below are non-technical summaries of my recent peer-reviewed publications.</p>
+      <ul class="list-unstyled">
+        {% for post in site.categories.publications limit:items_to_show %}
+        <li>{{ post.authors | array_to_sentence_string }}. <a href="{{ post.url }}">{{ post.title }}</a>. <em>{{ post.journal }}</em>, <a href="http://dx.doi.org/{{ post.doi }}">doi:{{ post.doi }}</a> ({{ post.date | date: "%Y" }}).</li>
+        {% endfor %}
+      </ul>
+      {% assign posts_not_shown = site.categories.publications | size | minus: items_to_show %}
+      {% if posts_not_shown > 0 %}
+      <p><a href="/publications/">Plus {{ posts_not_shown }} older publication{% if posts_not_shown > 1 %}s{% endif %}</a></p>
+      {% endif %}
 
-<h2>Recent scientific notes:</h2>
-<p>A &ldquo;scientific note&rdquo; is a non-peer reviewed technical commentary on a scientific topic.</p>
-...
-{% endcomment %}
+      <h2>Recent scientific notes:</h2>
+      <p>A &ldquo;scientific note&rdquo; is a non-peer reviewed technical commentary on a scientific topic.</p>
+      ...
+      {% endcomment %}
 
 
+    </div>
   </div>
 </div>

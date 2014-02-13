@@ -9,7 +9,9 @@ Tropical cyclone Dylan crossed the coast of North Queensland at approximately 3:
 
 So how did this come to be? I thought that it would be interesting to compare the various predictions with the actual path that the cyclone took. The Bureau of Meteorology's tracking maps are updated several times a day, but they always replace the old maps on their website with the new ones, presumably to avoid confusion. Luckily for me, the tracking maps were also being shared on Facebook by the Townsville City Council, so I was able to get hold of most of the old forecasts. I downloaded all the old forecast maps that I could find, and overlaid them, one by one, on top of a larger map of Australia. I lined up the maps as best I could and then drew over the top of the predicted paths. This is the result:
 
+<div class="full-width">
 <img src="{{ site.url }}/images/2014/01/TC_Dylan_forecasts.png" alt="Track map of forecast positions for Tropical Cyclone Dylan" class="img-responsive" />
+</div>
 
 Each line represents a forecast trajectory that was published at a particular time. The time of each forecast is labelled at the bottom left of each line. The actual path taken is the thicker red line.
 

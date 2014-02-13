@@ -1,6 +1,8 @@
 body {
   font-family: 'Open Sans';
   background-color: #f5f7f7;
+  font-size: 16px;
+  color: #000000;
 }
 
 a {
@@ -24,6 +26,14 @@ a:hover {
   }
 }
 
+.article {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: 'Libre Baskerville', 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
 h1 {
   padding-top: 15px;
 }
@@ -44,25 +54,107 @@ h6,
   font-weight: 300;
 }
 
-.blog-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.15em;
+.main > h1,
+.main > h2,
+.main > h3,
+.main > h4,
+.main > h5,
+.main > h6,
+.main > div,
+.main > p,
+.main > img,
+.main > pre
+{
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5px;
+}
+
+.main ul,
+.main ol
+{
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+code {
+  color: #111111;
+}
+
+div.highlight
+{
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #242424;
+  color: #f6f3e8;
+}
+
+div.highlight pre {
+  border: 0 0;
+  background: #242424;
+  color: #f6f3e8;
+}
+
+@media (min-width: 700px) {
+  div.highlight pre {
+    display: table;
+    min-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.article p,
+.article ul,
+.article ol,
+.article div {
+  margin-bottom: 25px;
+}
+
+.main .full-width,
+.main .full-width-grey {
+  width: 100%;
+  max-width: 100%;
+}
+
+.main .full-width-grey {
+  border-width: 1px 0px;
+  border-style: solid none;
+  border-color: #D2D2D2;
+}
+
+.full-width img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  padding: 0 0;
 }
 
 .blog-footer {
   padding-bottom: 15px;
   font-size: 0.75em;
   color: #787878;
+  font-family: 'Open Sans', sans
 }
 
 .blog-footer a {
   color: #7d756e;
 }
 
+.blog-footer * {
+  margin-bottom: 0;
+}
+
 .dateline {
   color: #787878;
+  font-family: 'Open Sans', sans
+}
+
+textarea, input {
+  font-family: 'Open Sans', sans
 }
 
 .navbar {
@@ -71,11 +163,6 @@ h6,
   border-right: 1px solid #DC6600;
   border-bottom: 1px solid #DC6600;
   border-left: 1px solid #DC6600;
-}
-
-code {
-  color: #222222;
-  background-color: #F2F2F2;
 }
 
 .dropdown-menu > .active > a,

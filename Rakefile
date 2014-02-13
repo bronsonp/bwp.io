@@ -16,9 +16,9 @@ end
 
 # CSS
 desc "Build the CSS"
-file $assets[:css] => ['assets/src/bootstrap.css', 'assets/src/bwp.css'] do
+file $assets[:css] => ['assets/src/bootstrap.css', 'assets/src/bwp.css', 'assets/src/wombat.css'] do
   puts "Minifying CSS"
-  system "recess assets/src/bootstrap.css assets/src/bwp.css --compress > #{$assets[:css]}"
+  system "recess assets/src/bootstrap.css assets/src/wombat.css assets/src/bwp.css --compress > #{$assets[:css]}"
   fingerprint_asset :css
 end
 
