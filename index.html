@@ -44,24 +44,17 @@ layout: front-page
       <p><a href="/blog/">Plus {{ posts_not_shown }} older post{% if posts_not_shown > 1 %}s{% endif %}</a></p>
       {% endif %}
 
-      {% comment %}
       <h2>Recent scientific publications:</h2>
-      <p>The links below are non-technical summaries of my recent peer-reviewed publications.</p>
-      <ul class="list-unstyled">
+      <p>The links below give non-technical summaries of each paper.</p>
+      <ul class="list-unstyled list-spaced">
         {% for post in site.categories.publications limit:items_to_show %}
-        <li>{{ post.authors | array_to_sentence_string }}. <a href="{{ post.url }}">{{ post.title }}</a>. <em>{{ post.journal }}</em>, <a href="http://dx.doi.org/{{ post.doi }}">doi:{{ post.doi }}</a> ({{ post.date | date: "%Y" }}).</li>
+        <li>{{ post.authors | array_to_sentence_string }}. <a href="{{ post.url }}">{{ post.title }}</a>. {% if post.journal %}<em>{{ post.journal }}</em>, doi:{{ post.doi }}{% else %}Preprint{% endif %} ({{ post.date | date: "%Y" }}). </li>
         {% endfor %}
       </ul>
       {% assign posts_not_shown = site.categories.publications | size | minus: items_to_show %}
       {% if posts_not_shown > 0 %}
       <p><a href="/publications/">Plus {{ posts_not_shown }} older publication{% if posts_not_shown > 1 %}s{% endif %}</a></p>
       {% endif %}
-
-      <h2>Recent scientific notes:</h2>
-      <p>A &ldquo;scientific note&rdquo; is a non-peer reviewed technical commentary on a scientific topic.</p>
-      ...
-      {% endcomment %}
-
 
     </div>
   </div>

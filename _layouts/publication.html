@@ -1,0 +1,21 @@
+{% include precontent.html %}
+{% include navbar.html %}
+<article class="main article">
+  <h2 class="entry-title" itemprop="name">{{ page.title }}</h2>
+  <p>{{ page.authors | array_to_sentence_string }}. {% if page.journal %}<em>{{ page.journal }}</em>, <a href="http://dx.doi.org/{{ page.doi }}">doi:{{ page.doi }}</a>{% else %}Preprint{% endif %} ({{ page.date | date: "%Y" }}).</p>
+
+  <ul class="list-unstyled">
+  {% if page.local_pdf %}
+  <li><a href="{{ page.local_pdf }}">» Download PDF</a></li>
+  {% endif %}
+
+  {% if page.preprint %}
+  <li><a href="{{ page.preprint }}">» View preprint</a></li>
+  {% endif %}
+  </ul>
+
+  {{ content }}
+
+</article>
+
+{% include postcontent.html %}

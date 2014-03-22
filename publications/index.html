@@ -1,12 +1,12 @@
 ---
 layout: navpage
-title: Blog posts
-permalink: /blog/
-description: "An archive of posts."
+title: Publications
+permalink: /publications/
+description: "An archive of publications"
 ---
 
 <ul class="list-unstyled">
-{% for post in site.categories.blog %}
+{% for post in site.categories.publications %}
 <li><span class="post-date">{{ post.date | date_to_string }} » </span><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
 <li><a href="/feed.atom"><img src="/assets/images/feed-icon-14x14.png" alt="RSS icon" /> Subscribe to feed</a></li>
