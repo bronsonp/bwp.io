@@ -42,4 +42,4 @@ kramdown:
   toc_levels: 1..6
 
 include: ["_pages"]
-exclude: ["src", "Rakefile", "README.md", "s3_website.yml", "drafts", "publications"]
+exclude: ["src", "Rakefile", "README.md", "s3_website.yml", "drafts"]
