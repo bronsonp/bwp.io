@@ -5,5 +5,11 @@ max_age:
   "assets/*": 86400
   "*": 300
 gzip: true
+gzip_zopfli: true
 s3_reduced_redundancy: true
 s3_endpoint: ap-southeast-2
+index_document: index.html
+error_document: 404.html
+redirects:
+  gscholar/index.html: http://scholar.google.com.au/citations?user=njhB7pgAAAAJ&hl=en
+  scholar/index.html: http://scholar.google.com.au/citations?user=njhB7pgAAAAJ&hl=en
